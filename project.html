@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Academy</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* Mobile menu */
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      margin-top: 0;
+      margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #ff9800;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background: #e67e22;
+    }
+
+    /* Why Section */
+    .why {
+      padding: 60px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .why h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .feature {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+    /* Feature */
+    .courses {
+      padding: 60px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .courses h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .course {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .cours {
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .cours:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Learning Academy</h1>
+    <span class="menu-toggle">☰</span>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h2>"Become a Certified Ethical Hacker. Secure the Future."</h2>
+    <p>Learn ethical hacking, penetration testing, and cybersecurity with real-world simulations and expert mentorship.</p>
+    <!--<button onclick="scrollToSection('courses')">Browse Courses</button>-->
+    <button onclick="scrollToSection('why')">Get Started</button>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why" id="why">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Real-world Training</h3>
+        <p>Hands-on labs, Capture The Flag challenges, and red vs blue team warfare.</p>
+      </div>
+      <div class="feature">
+        <h3>Industry-Recognized Certifications</h3>
+        <p>Courses aligned with CEH, CHFI, OSCP, and more.</p>
+      </div>
+      <div class="feature">
+        <h3>Expert Instructors</h3>
+        <p>Led by certified ethical hackers, penetration testers, and cybersecurity analysts.</p>
+      </div>
+      <div class="feature">
+        <h3>Career Guidance</h3>
+        <p>Resume building, mock interviews, and placement support.</p>
+      </div>
+    </div>
+  </section>
+  <!--Featured Section-->
+  <section class="courses" id="courses">
+    <h2>Popular Courses</h2>
+    <div class="course">
+      <div class="cours">
+        <h3>CEH (Certified Ethical Hacker)</h3>
+       
+      </div>
+      <div class="cours">
+        <h3>Bug Bounty Masterclass</h3>
+       
+      </div>
+      <div class="cours">
+        <h3>Red Team vs Blue Team Simulation</h3>
+        
+      </div>
+      <div class="cours">
+        <h3>Ethical Hacking for Beginners</h3>
+        
+      </div>
+      <div class="cours">
+        <h3>Network Security & Firewall Configs</h3>
+        
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 Learning Academy | All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth scroll
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
